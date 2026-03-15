@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 
-Route::livewire('/post', 'post.index');
-Route::livewire('/post/create', 'post.form');
+Route::get('/post', \App\Livewire\Post\Index::class);
+Route::get('/post/create', \App\Livewire\Post\Form::class);
