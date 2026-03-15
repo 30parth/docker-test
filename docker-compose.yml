@@ -8,6 +8,6 @@ services:
       - "8080:80"
     environment:
       - PORT=80
-      - DB_CONNECTION=sqlite
+      - DB_CONNECTION=mysql
     env_file:
       - .env
