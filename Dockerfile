@@ -11,11 +11,12 @@ RUN composer install \
     --no-interaction \
     --prefer-dist \
     --optimize-autoloader \
-    --ignore-platform-reqs
+    --ignore-platform-reqs \
+    --no-scripts
 
 # Copy application files
 COPY . .
-RUN composer dump-autoload --optimize
+RUN composer dump-autoload --optimize --no-scripts
 
 # Stage 2: Build Frontend Assets
 FROM node:20 as frontend
